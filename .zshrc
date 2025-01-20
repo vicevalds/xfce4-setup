@@ -1,8 +1,6 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
-export PATH=$PATH:/home/vice/.local/bin:/home/vice/miniconda3/bin
-
 function pdf() {
   firefox "file://$(realpath $1)"
 }
@@ -225,8 +223,8 @@ if [ -x /usr/bin/dircolors ]; then
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -248,8 +246,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l'
-alias lla='ls -la'
+alias ll='ls -lhrt'
+alias lla='ls -lhrta'
 alias la='ls -A'
 alias l='ls -CF'
 alias clear='printf "\e[H\e[3J"'

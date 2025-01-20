@@ -18,8 +18,11 @@ cp -r .config/kitty .config/rofi ~/.config
 sudo cp .config/user.png /usr/share/backgrounds/
 cp .zshrc ~/.
 
+sudo cp .zshrc /root
+sudo usermod -s /usr/bin/zsh root
+
 sudo cp -r img/ /usr/share/backgrounds/
-#xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/backgrounds/img/forest.png
+xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/backgrounds/img/forest.png
 
 xfce4-panel-profiles load xfce4-custom.tar.bz2
 
@@ -39,5 +42,3 @@ firefox https://discord.com/api/download?platform=linux&format=deb
 firefox https://telegram.org/dl/desktop/linux
 firefox https://code.visualstudio.com/docs/?dv=linux64_deb
 firefox https://obsidian.md/download
-echo "sudo dpkg -i ~/Downloads/discord*"|xclip -sel clip
-echo "paste with ctrl V to install discord"
