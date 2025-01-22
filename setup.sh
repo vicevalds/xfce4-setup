@@ -8,10 +8,12 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
 
-sudo apt install -y rofi brightnessctl flameshot kitty xclip redshift
+sudo apt install -y rofi brightnessctl flameshot kitty xclip redshift ntfs-3g
 # For debian
 sudo apt install -y xfce4-panel-profiles zsh zsh-autosuggestions zsh-syntax-highlighting
 sudo usermod -s /usr/bin/zsh $USER
+sudo ln -sf /sbin/shutdown /usr/bin/shutdown
+sudo ln -sf /sbin/reboot /usr/bin/reboot
 ###
 sudo cp onedark.rasi /usr/share/rofi/themes
 cp -r .config/kitty .config/rofi ~/.config
@@ -38,7 +40,7 @@ xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Sh
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>r' -s "redshift -O 2000"
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super><Shift>r' -s "redshift -x"
 
-firefox https://discord.com/api/download?platform=linux&format=deb
-firefox https://telegram.org/dl/desktop/linux
-firefox https://code.visualstudio.com/docs/?dv=linux64_deb
-firefox https://obsidian.md/download
+#firefox https://discord.com/api/download?platform=linux&format=deb
+#firefox https://telegram.org/dl/desktop/linux
+#firefox https://code.visualstudio.com/docs/?dv=linux64_deb
+#firefox https://obsidian.md/download
