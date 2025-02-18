@@ -54,12 +54,12 @@ if [[ -n $APPS ]]; then
 fi
 # Set xfce4 enviroment
 xfce4-panel-profiles load xfce4-custom.tar.bz2
-#xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/images/desktop-base/forest.png
+xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/images/desktop-base/forest.png
 
 read -p "Reboot the system? [Y/n]: " response
 if [[ "$response" == "Y" || "$response" == "y" ]]; then
   reboot
 else
-  echo "[!] Reboot is needed to use the trackpad"
+  echo "[!] Reboot is needed to refresh xfce4 and use the trackpad"
   echo "[!] After reboot run synclient tapbutton1=1 to use the trackpad"
 fi
