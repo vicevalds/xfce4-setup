@@ -38,10 +38,11 @@ sudo ln -sf /sbin/shutdown /usr/bin/shutdown
 sudo ln -sf /sbin/reboot /usr/bin/reboot
 # Custom menu and backgrounds
 sudo cp onedark.rasi /usr/share/rofi/themes/.
-sudo cp .config/user.png /usr/share/backgrounds/.
-sudo cp img/* /usr/share/backgrounds/.
+sudo cp img/* /usr/share/images/desktop-base/.
+sudo cp lightdm/.face /usr/share/images/desktop-base/.
+sudo cp lightdm/lightdm-gtk-greeter.conf /etc/lightdm/.
 # Install dotfiles
-cp -r .config/rofi ~/.config/.
+cp -r .config/rofi .config/xfce4/ ~/.config/.
 cp .bashrc ~/.
 cp .bash_aliases ~/.
 # Install Apps
@@ -53,16 +54,7 @@ if [[ -n $APPS ]]; then
 fi
 # Set xfce4 enviroment
 xfce4-panel-profiles load xfce4-custom.tar.bz2
-xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/backgrounds/forest.png
-# xfconf-query -c xfce4-keyboard-shortcuts -l
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>m' -s "rofi -show drun"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super><Shift>m' -s "rofi -show"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/Print' -s "flameshot gui"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>b' -s "firefox"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Shift>F3' -s "brightnessctl set +3%"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Shift>F2' -s "brightnessctl set 3%-"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>r' -s "redshift -O 2000"
-#xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super><Shift>r' -s "redshift -x"
+#xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s /usr/share/images/desktop-base/forest.png
 
 read -p "Reboot the system? [Y/n]: " response
 if [[ "$response" == "Y" || "$response" == "y" ]]; then
