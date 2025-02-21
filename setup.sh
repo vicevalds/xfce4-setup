@@ -61,5 +61,6 @@ if [[ "$response" == "Y" || "$response" == "y" ]]; then
   reboot
 else
   echo "[!] Reboot is needed to refresh xfce4"
-  echo "[!] After reboot run synclient tapbutton1=1 to use the trackpad"
+  echo "[!] After reboot run to use the trackpad"
+  echo "        synclient tapbutton1=1"
 fi
