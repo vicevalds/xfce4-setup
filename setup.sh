@@ -45,9 +45,10 @@ cp -r .config/rofi .config/xfce4/ ~/.config/.
 cp .bashrc ~/.
 # Install Apps
 if [[ -n $APPS ]]; then
+  curl -f https://zed.dev/install.sh | sh
+  cp -r .config/zed ~/.config/.
   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   firefox https://discord.com/api/download?platform=linux&format=deb
-  firefox https://code.visualstudio.com/docs/?dv=linux64_deb
   firefox https://obsidian.md/download
   firefox https://telegram.org/dl/desktop/linux
 fi
