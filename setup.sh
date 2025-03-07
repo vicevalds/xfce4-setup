@@ -45,13 +45,7 @@ cp -r .config/rofi .config/xfce4/ ~/.config/.
 cp .bashrc ~/.
 # Install Apps
 if [[ -n $APPS ]]; then
-  #curl -f https://zed.dev/install.sh | sh
-  #cp -r .config/zed ~/.config/.
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-  firefox https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-  firefox https://discord.com/api/download?platform=linux&format=deb
-  firefox https://obsidian.md/download
-  firefox https://telegram.org/dl/desktop/linux
+  bash apps.sh
 fi
 # Set xfce4 enviroment
 xfce4-panel-profiles load xfce4-custom.tar.bz2
