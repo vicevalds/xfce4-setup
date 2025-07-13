@@ -6,6 +6,11 @@ firefox https://discord.com/api/download?platform=linux&format=deb
 firefox https://telegram.org/dl/desktop/linux
 
 if false; then
+    wget -qO- https://get.pnpm.io/install.sh | sh -
+    pnpm env use --global lts
+fi
+
+if false; then
     curl -f https://zed.dev/install.sh | sh
     # Miniconda quick install
     mkdir -p ~/miniconda3

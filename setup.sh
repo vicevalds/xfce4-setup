@@ -10,7 +10,7 @@ fi
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y xfce4 xfce4-panel-profiles xfce4-power-manager
-sudo apt install -y bat vim htop rofi curl cmake brightnessctl flameshot xclip redshift ntfs-3g
+sudo apt install -y bat vim htop rofi curl cmake brightnessctl flameshot xclip redshift ntfs-3g vlc
 # To use the trackpad
 sudo apt install -y xserver-xorg-input-synaptics
 sudo apt autoremove -y
