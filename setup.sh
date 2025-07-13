@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-local BACKGROUND="monet.png"
+BACKGROUND="monet.png"
 
 if [[ $(whoami) == "root" ]]; then
   echo "[!] Run this script as unprivileged user (no sudo)"
