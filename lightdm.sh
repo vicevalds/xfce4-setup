@@ -12,7 +12,7 @@ echo "default-user-image=/usr/share/images/desktop-base/.face" | sudo tee -a /et
 wget https://github.com/JezerM/nody-greeter/releases/download/1.6.2/nody-greeter-1.6.2-debian.deb
 sudo apt install -y gobject-introspection liblightdm-gobject-dev
 sudo dpkg -i nody-greeter-1.6.2-debian.deb
-rm nody-greeter-1.6.2-debian.deb
+#rm nody-greeter-1.6.2-debian.deb
 # Set nody-greeter theme
 git clone https://github.com/vicevalds/lightdm-web-greeter-theme-simple
 sudo mv lightdm-web-greeter-theme-simple /usr/share/web-greeter/themes/.
