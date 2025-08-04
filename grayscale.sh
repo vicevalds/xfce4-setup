@@ -14,11 +14,11 @@ sudo /sbin/ldconfig -v
 xfconf-query -c xfce4-keyboard-shortcuts \
   -p "/commands/custom/<Super>g" \
   -n -t string \
-  -s "sh -c 'vibrant-cli $(xrandr |grep -w connected |head -n1 |cut -d" " -f1) 0; xgamma -gamma 1.2'"
+  -s "sh -c 'vibrant-cli $(xrandr |grep -w connected |head -n1 |cut -d" " -f1) 0'"
 xfconf-query -c xfce4-keyboard-shortcuts \
   -p "/commands/custom/<Super><Shift>g" \
   -n -t string \
-  -s "sh -c 'vibrant-cli $(xrandr |grep -w connected |head -n1 |cut -d" " -f1) 1; xgamma -gamma 1.0'"
+  -s "sh -c 'vibrant-cli $(xrandr |grep -w connected |head -n1 |cut -d" " -f1) 1'"
 
 read -p "Reboot the system? [Y/n]: " response
 if [[ "$response" == "Y" || "$response" == "y" ]]; then
