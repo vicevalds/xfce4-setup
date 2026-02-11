@@ -42,7 +42,7 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Super&gt;m" type="string" value="rofi -show drun"/>
       <property name="&lt;Super&gt;&lt;Shift&gt;m" type="string" value="rofi -show"/>
-      <property name="&lt;Super&gt;b" type="string" value="firefox"/>
+      <property name="&lt;Super&gt;b" type="string" value="brave-browser"/>
       <property name="&lt;Shift&gt;F3" type="string" value="brightnessctl set +3%"/>
       <property name="&lt;Shift&gt;F2" type="string" value="brightnessctl set 3%-"/>
       <property name="&lt;Super&gt;&lt;Shift&gt;r" type="string" value="redshift -x"/>

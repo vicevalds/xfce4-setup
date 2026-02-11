@@ -29,6 +29,8 @@ xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "work
 
 # Custom lightdm
 bash lightdm.sh
+# Brave
+curl -fsS https://dl.brave.com/install.sh | sh
 
 read -p "Reboot the system? [Y/n]: " response
 if [[ "$response" == "Y" || "$response" == "y" ]]; then
